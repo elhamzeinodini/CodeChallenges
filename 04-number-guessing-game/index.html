@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+</head>
+
+<body>
+    <div class="p-[2rem] max-w-xl mx-auto">
+        <h3 class="text-xl text-center font-bold">Number Guessing Game</h3>
+
+        <p class="mt-[2rem]">
+            We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell
+            you if your
+            guess was too high or too low.
+        </p>
+
+        <div class="mt-[2rem] flex items-center">
+            <label class="text-md">Enter a guess: </label>
+
+            <div class="flex items-center ms-2">
+                <input type="number" class="block border rounded py-2 px-4" placeholder="0.00" />
+
+                <button class="submit ms-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Submit guess
+                </button>
+            </div>
+        </div>
+
+        <div class="previous-guesses flex items-center mt-[2rem]">
+            <span class="title"></span>
+            <ul class="guesses flex items-center ms-2"></ul>
+        </div>
+
+        <div class="mt-[2rem] answer-status-container">
+            <span class="font-bold w-full p-2 block answer-status"></span>
+
+            <button class="mt-2 hidden start ms-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                start new game
+            </button>
+        </div>
+    </div>
+
+    <!-- ------------------------------- scripts ------------------------------- -->
+    <script src=" https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
