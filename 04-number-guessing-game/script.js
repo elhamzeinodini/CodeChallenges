@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     guessCounter = 0;
     input.disabled = false;
     startBtn.style.display = "none";
+    input.focus();
   }
 
   function evaluateGuessFeedback(guess) {
@@ -62,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     switch (true) {
       case limitExceeded:
         updateStatusUI("Game over!", "red");
+        submitButton.disabled = true;
         showNewGameBtn();
         break;
       case difference === 0:
@@ -108,4 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   submitButton.addEventListener("click", assessNumber);
   startBtn.addEventListener("click", reset);
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") assessNumber();
+  });
 });
